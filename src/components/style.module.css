@@ -87,3 +87,54 @@
     font-size: 1.2rem;
   }
 }
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  align-items: center;
+  justify-content: center;
+}
+
+/* ============== FOOTERv=================== */
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* space between © text and links */
+  padding: 20px;
+  background-color: #111;
+}
+
+.footerLinks {
+  display: flex;
+  gap: 20px;
+}
+
+.footerLinks a {
+  color: #bbb;
+  text-decoration: none;
+}
+
+.footerLinks a:hover {
+  color: #fff;
+}
+
+.footer p {
+  color: #bbb;
+  margin: 0; /* no need text-align center anymore */
+}
+
+.socialIcons {
+  display: flex;
+  gap: 15px;
+}
+
+.socialIcons a {
+  color: #bbb;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.socialIcons a:hover {
+  color: #fff;
+}

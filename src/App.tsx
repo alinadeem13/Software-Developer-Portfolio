@@ -1,12 +1,10 @@
-
-import './App.css'
-import { Layout } from './components/Layout'
-import { About } from './sections/About'
-import Hero from './sections/Hero'
+import "./App.css";
+import { Layout } from "./components/Layout";
+import { About } from "./sections/About";
+import Hero from "./sections/Hero";
 // import './index.css'
 
 function App() {
-
   return (
     <div>
       <Layout>
@@ -14,7 +12,7 @@ function App() {
         <About />
       </Layout>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
