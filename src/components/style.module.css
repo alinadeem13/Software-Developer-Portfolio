@@ -1,0 +1,89 @@
+/* ============== Navbar =============== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #0d1117, #161b22); /* dark gradient */
+  color: #f0f6fc;
+  padding: 1rem 2rem;
+  position: relative;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Logo / Brand */
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #58a6ff; /* blue accent */
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+/* Hamburger / Close button */
+.hamburger {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #f0f6fc;
+  cursor: pointer;
+  display: none; /* hidden on desktop */
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1200;
+}
+
+/* Nav list (desktop view) */
+.navList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navList li a {
+  text-decoration: none;
+  color: #f0f6fc;
+  font-size: 1rem;
+  transition:
+    color 0.3s ease,
+    border-bottom 0.3s ease;
+  padding: 0.25rem 0;
+}
+
+.navList li a:hover {
+  color: #58a6ff; /* blue highlight */
+  border-bottom: 2px solid #58a6ff;
+}
+
+/* --------- Mobile Styles ---------- */
+@media (max-width: 600px) {
+  .hamburger {
+    display: block;
+  }
+
+  .navList {
+    flex-direction: column;
+    gap: 1.5rem;
+    position: fixed;
+    top: 0;
+    right: -280px; /* hidden offscreen */
+    width: 250px;
+    height: 100%;
+    background: #161b22; /* dark sidebar */
+    padding: 4rem 1rem;
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
+    box-shadow: -3px 0 8px rgba(0, 0, 0, 0.6);
+  }
+
+  .navList.active {
+    right: 0;
+  }
+
+  .navList li a {
+    font-size: 1.2rem;
+  }
+}
