@@ -20,7 +20,7 @@ export const Navbar = () => {
 
   return (
     <nav className={styles.navbar}>
-      <h1 className={styles.brand}>Ali Nadeem</h1>
+      <h1 className={styles.logo}>Ali Nadeem</h1>
 
       {/* Hamburger */}
       <button
