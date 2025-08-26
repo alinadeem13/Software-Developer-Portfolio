@@ -4,13 +4,19 @@
   --font-heading: "Poppins", sans-serif;
 
   /* Colors */
-  --color-primary: #6366f1; /* Indigo */
-  --color-secondary: #14b8a6; /* Teal */
-  --color-accent: #f43f5e; /* Rose */
-  --color-bg-dark: #0f172a; /* Slate-900 */
+  --color-primary: #6366f1;
+  /* Indigo */
+  --color-secondary: #14b8a6;
+  /* Teal */
+  --color-accent: #f43f5e;
+  /* Rose */
+  --color-bg-dark: #0f172a;
+  /* Slate-900 */
   --color-bg-light: #ffffff;
-  --color-text-dark: #f1f5f9; /* Slate-100 */
-  --color-text-light: #1e293b; /* Slate-800 */
+  --color-text-dark: #f1f5f9;
+  /* Slate-100 */
+  --color-text-light: #1e293b;
+  /* Slate-800 */
 
   --transition-speed: 0.3s;
 }
@@ -165,10 +171,12 @@ button:hover {
   .navbar-links {
     display: none;
   }
+
   .navbar-toggle {
     display: block;
   }
 }
+
 html,
 body,
 #root {
@@ -183,5 +191,19 @@ body,
 }
 
 .layout main {
-  flex: 1; /* pushes footer down */
+  flex: 1;
+  /* pushes footer down */
+}
+
+/* Default state (hidden before scroll) */
+.fadeInUp {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+}
+
+/* Active state when scrolled into view */
+.fadeInUp.active {
+  opacity: 1;
+  transform: translateY(0);
 }
