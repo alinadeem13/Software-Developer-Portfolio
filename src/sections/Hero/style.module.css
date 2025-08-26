@@ -1,0 +1,104 @@
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px;
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--color-bg-dark), #1e293b);
+    color: var(--color-text-dark);
+    text-align: center;
+    gap: 40px;
+}
+
+/* Image */
+.heroImage img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid var(--color-primary);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s ease;
+}
+
+.heroImage img:hover {
+    transform: scale(1.45);
+}
+
+/* Content */
+.heroContent {
+    max-width: 600px;
+}
+
+.heroContent h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: 800;
+    color: var(--color-text-dark);
+}
+
+.highlight {
+    color: var(--color-primary);
+}
+
+.heroContent h2 {
+    font-size: 1.5rem;
+    color: var(--color-secondary);
+    margin-bottom: 15px;
+}
+
+.heroContent p {
+    font-size: 1rem;
+    color: #cbd5e1;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* Buttons */
+.heroButtons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.primaryBtn,
+.secondaryBtn {
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.primaryBtn {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.primaryBtn:hover {
+    background-color: #4f46e5;
+}
+
+.secondaryBtn {
+    border: 2px solid #9ca3af;
+    color: #e2e8f0;
+}
+
+.secondaryBtn:hover {
+    border-color: white;
+    color: white;
+}
+
+/* Responsive Layout */
+@media (min-width: 768px) {
+    .hero {
+        flex-direction: row;
+        text-align: left;
+        gap: 60px;
+    }
+
+    .heroButtons {
+        justify-content: flex-start;
+    }
+}

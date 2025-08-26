@@ -3,7 +3,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(90deg, #0d1117, #161b22); /* dark gradient */
+  background: linear-gradient(90deg, #0d1117, #161b22);
+  /* dark gradient */
   color: #f0f6fc;
   padding: 1rem 2rem;
   position: relative;
@@ -15,7 +16,8 @@
 .navbar .logo {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #58a6ff; /* blue accent */
+  color: #58a6ff;
+  /* blue accent */
   text-decoration: none;
   letter-spacing: 1px;
 }
@@ -27,7 +29,8 @@
   border: none;
   color: #f0f6fc;
   cursor: pointer;
-  display: none; /* hidden on desktop */
+  display: none;
+  /* hidden on desktop */
   position: fixed;
   top: 1rem;
   right: 1rem;
@@ -54,7 +57,8 @@
 }
 
 .navList li a:hover {
-  color: #58a6ff; /* blue highlight */
+  color: #58a6ff;
+  /* blue highlight */
   border-bottom: 2px solid #58a6ff;
 }
 
@@ -62,6 +66,7 @@
 @media (max-width: 600px) {
   .hamburger {
     display: block;
+    font-size: 1rem;
   }
 
   .navList {
@@ -69,10 +74,12 @@
     gap: 1.5rem;
     position: fixed;
     top: 0;
-    right: -280px; /* hidden offscreen */
-    width: 250px;
+    right: -280px;
+    /* hidden offscreen */
+    width: 240px;
     height: 100%;
-    background: #161b22; /* dark sidebar */
+    background: #161b22;
+    /* dark sidebar */
     padding: 4rem 1rem;
     transition: right 0.3s ease-in-out;
     z-index: 1000;
@@ -87,6 +94,7 @@
     font-size: 1.2rem;
   }
 }
+
 .logo {
   font-size: 1.5rem;
   font-weight: 700;
@@ -95,12 +103,27 @@
   justify-content: center;
 }
 
-/* ============== FOOTERv=================== */
+/* ============== FOOTER=================== */
+
+
+@media(max-width: 600px) {
+  .footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .footer p {
+    margin-bottom: 10px;
+  }
+}
+
 
 .footer {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* space between © text and links */
+  justify-content: space-between;
+  /* space between © text and links */
   padding: 20px;
   background-color: #111;
 }
@@ -121,7 +144,8 @@
 
 .footer p {
   color: #bbb;
-  margin: 0; /* no need text-align center anymore */
+  margin: 0;
+  /* no need text-align center anymore */
 }
 
 .socialIcons {

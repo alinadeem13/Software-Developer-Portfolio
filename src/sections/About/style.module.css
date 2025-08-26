@@ -1,0 +1,41 @@
+.about {
+    padding: 100px 20px;
+    background: linear-gradient(to bottom,
+            #0a0a0a,
+            /* Hero background (black) */
+            #1e293b
+            /* Deep slate blue for About */
+        );
+    text-align: center;
+    position: relative;
+    color: #f1f5f9;
+    /* soft text color */
+}
+
+.about::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 120px;
+    background: linear-gradient(to bottom,
+            rgba(99, 102, 241, 0.25),
+            /* soft indigo glow */
+            transparent);
+    pointer-events: none;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.about p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 10px auto;
+    line-height: 1.8;
+    color: #cbd5e1;
+}
