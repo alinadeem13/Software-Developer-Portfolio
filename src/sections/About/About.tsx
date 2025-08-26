@@ -38,9 +38,13 @@ export const About = () => {
                     building modern, scalable, and user-friendly web apps.
                 </p>
                 <p>
+                    I specialize in MERN Stack (MongoDB, Express.js, React.js Next.js, Node.js, Oracle), Shopify Development, and WordPress/LMS solutions, helping businesses and startups achieve their digital goals.
+                </p>
+                <p>
                     When I’m not coding, I enjoy exploring new tech, learning AI tools,
                     and helping people through software solutions.
                 </p>
+
             </div>
         </section>
     );
