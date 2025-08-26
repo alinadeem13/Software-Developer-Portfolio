@@ -17,6 +17,20 @@ export const Navbar = () => {
     }, [isOpen]);
 
     const closeMenu = () => setIsOpen(false);
+    // Add this to your navbar component
+    useEffect(() => {
+        const handleScroll = () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar?.classList.add('scrolled');
+            } else {
+                navbar?.classList.remove('scrolled');
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
     return (
         <nav className={styles.navbar}>

@@ -1,41 +1,261 @@
 .about {
-    padding: 100px 20px;
-    background: linear-gradient(to bottom,
-            #0a0a0a,
-            /* Hero background (black) */
-            #1e293b
-            /* Deep slate blue for About */
-        );
+    padding: 120px 20px;
+    background: linear-gradient(180deg,
+            var(--color-bg-primary) 0%,
+            var(--color-bg-secondary) 50%,
+            #2d1b69 100%);
     text-align: center;
     position: relative;
-    color: #f1f5f9;
-    /* soft text color */
+    color: var(--color-text-primary);
+    overflow: hidden;
 }
 
+/* Decorative background elements */
 .about::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    height: 120px;
-    background: linear-gradient(to bottom,
-            rgba(99, 102, 241, 0.25),
-            /* soft indigo glow */
-            transparent);
+    height: 200px;
+    background: linear-gradient(180deg,
+            rgba(139, 92, 246, 0.1) 0%,
+            rgba(6, 182, 212, 0.05) 50%,
+            transparent 100%);
     pointer-events: none;
 }
 
-.about h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #fff;
+.about::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -150px;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle,
+            rgba(245, 158, 11, 0.05) 0%,
+            transparent 70%);
+    border-radius: 50%;
+    animation: float 8s ease-in-out infinite;
 }
 
+/* Container for content */
+.about-container {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+/* Main heading */
+.about h2 {
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    margin-bottom: 30px;
+    background: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    display: inline-block;
+}
+
+.about h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: var(--gradient-secondary);
+    border-radius: 2px;
+}
+
+/* Paragraphs styling */
 .about p {
-    font-size: 1.1rem;
-    max-width: 700px;
-    margin: 10px auto;
+    font-size: 1.2rem;
+    max-width: 750px;
+    margin: 25px auto;
     line-height: 1.8;
-    color: #cbd5e1;
+    color: var(--color-text-secondary);
+    position: relative;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    transition: all 0.3s ease;
+}
+
+.about p:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+/* Skills or highlights section */
+.about-highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 60px;
+    padding: 0 20px;
+}
+
+.highlight-item {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--border-radius);
+    padding: 30px 20px;
+    text-align: center;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    overflow: hidden;
+}
+
+.highlight-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--gradient-primary);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.highlight-item:hover::before {
+    transform: scaleX(1);
+}
+
+.highlight-item:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: var(--shadow-lg);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.highlight-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 20px;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: white;
+    box-shadow: var(--shadow-md);
+}
+
+.highlight-item h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    background: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.highlight-item p {
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: none;
+    backdrop-filter: none;
+}
+
+.highlight-item:hover p {
+    color: var(--color-text-secondary);
+}
+
+/* Stats section */
+.about-stats {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 60px;
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    text-align: center;
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--border-radius);
+    padding: 25px 20px;
+    min-width: 120px;
+    transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    background: var(--gradient-secondary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about {
+        padding: 80px 15px;
+    }
+
+    .about-highlights {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-top: 40px;
+        padding: 0;
+    }
+
+    .about-stats {
+        gap: 20px;
+        margin-top: 40px;
+    }
+
+    .stat-item {
+        min-width: 100px;
+        padding: 20px 15px;
+    }
+
+    .about p {
+        font-size: 1.1rem;
+        margin: 20px auto;
+        padding: 15px;
+    }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+    .about::after {
+        animation: none;
+    }
+
+    .highlight-item,
+    .stat-item,
+    .about p {
+        transition: none;
+    }
 }
