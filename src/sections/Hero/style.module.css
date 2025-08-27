@@ -131,7 +131,18 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    /* smooth effect */
 }
+
+.highlight:hover {
+    transform: scale(1.1) rotate(10deg);
+    /* zoom and rotate */
+    filter: drop-shadow(0 0 8px rgba(255, 158, 0, 0.6));
+    /* optional glow */
+}
+
+
 
 .highlight::after {
     content: '';

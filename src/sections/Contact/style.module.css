@@ -1,0 +1,202 @@
+.form-footer {
+    margin-top: auto;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.submit-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #8b5cf6, #06b6d4);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(139, 92, 246, 0.3);
+    background: linear-gradient(135deg, #7c3aed, #0891b2);
+}
+
+.submit-btn svg {
+    transition: transform 0.3s ease;
+}
+
+.submit-btn:hover svg {
+    transform: translate(2px, -2px);
+}
+
+.social-description {
+    font-size: 1rem;
+    color: #cbd5e1;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    flex-grow: 1;
+}
+
+.social-links-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.social-link-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    text-decoration: none;
+    color: #cbd5e1;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+.social-link-item:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: #06b6d4;
+    border-color: rgba(139, 92, 246, 0.2);
+    transform: translateX(4px);
+}
+
+.social-icon {
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.contact-footer {
+    margin-top: auto;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.response-time {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #94a3b8;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.response-time svg {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.3s ease;
+}
+
+.contact-card:hover .response-time {
+    color: #06b6d4;
+}
+
+.contact-card:hover .response-time svg {
+    transform: translate(2px, -2px);
+}
+
+/* Animations */
+.fadeInUp {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.fadeInUp.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 80px 1rem;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .contact-card {
+        padding: 25px 20px;
+        min-height: 350px;
+    }
+
+    .card-header {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+
+    .contact-subtitle {
+        font-size: 1rem;
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-title {
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+
+    .contact-card {
+        padding: 20px 15px;
+    }
+
+    .form-input {
+        padding: 12px 16px;
+    }
+
+    .social-links-grid {
+        gap: 10px;
+    }
+
+    .social-link-item {
+        font-size: 0.9rem;
+        padding: 10px 14px;
+    }
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+    .contact-card {
+        background: rgba(255, 255, 255, 0.03);
+        border-color: rgba(255, 255, 255, 0.08);
+    }
+
+    .contact-card:hover {
+        background: rgba(255, 255, 255, 0.05);
+    }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+
+    .contact-card,
+    .social-link-item,
+    .response-time,
+    .response-time svg,
+    .submit-btn,
+    .submit-btn svg {
+        transition: none;
+    }
+
+    .contact-card:hover {
+        transform: none;
+    }
+}

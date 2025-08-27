@@ -1,42 +1,39 @@
 import { useEffect, useState } from "react";
 import styles from "./style.module.css";
+import { HashLink } from "react-router-hash-link";
 
 export const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
-    // (optional) close on ESC
     useEffect(() => {
         const onKey = (e: KeyboardEvent) => e.key === "Escape" && setIsOpen(false);
         window.addEventListener("keydown", onKey);
         return () => window.removeEventListener("keydown", onKey);
     }, []);
 
-    // (optional) prevent body scroll when menu open
     useEffect(() => {
         document.body.style.overflow = isOpen ? "hidden" : "";
     }, [isOpen]);
 
-    const closeMenu = () => setIsOpen(false);
-    // Add this to your navbar component
     useEffect(() => {
         const handleScroll = () => {
-            const navbar = document.querySelector('.navbar');
+            const navbar = document.querySelector(`.${styles.navbar}`);
             if (window.scrollY > 50) {
-                navbar?.classList.add('scrolled');
+                navbar?.classList.add(styles.scrolled);
             } else {
-                navbar?.classList.remove('scrolled');
+                navbar?.classList.remove(styles.scrolled);
             }
         };
-
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
     }, []);
+
+    const closeMenu = () => setIsOpen(false);
 
     return (
         <nav className={styles.navbar}>
             <h1 className={styles.logo}>Software Developer</h1>
 
-            {/* Hamburger */}
             <button
                 className={styles.hamburger}
                 onClick={() => setIsOpen(!isOpen)}
@@ -47,31 +44,14 @@ export const Navbar = () => {
                 {isOpen ? "✖" : "☰"}
             </button>
 
-            {/* Nav list */}
             <ul
                 id="primary-navigation"
                 className={`${styles.navList} ${isOpen ? styles.active : ""}`}
             >
-                <li>
-                    <a href="#home" onClick={closeMenu}>
-                        Home
-                    </a>
-                </li>
-                <li>
-                    <a href="#about" onClick={closeMenu}>
-                        About
-                    </a>
-                </li>
-                <li>
-                    <a href="#projects" onClick={closeMenu}>
-                        Projects
-                    </a>
-                </li>
-                <li>
-                    <a href="#contact" onClick={closeMenu}>
-                        Contact
-                    </a>
-                </li>
+                <li><HashLink smooth to="/home#hero" onClick={closeMenu}>Home</HashLink></li>
+                <li><HashLink smooth to="/home#about" onClick={closeMenu}>About</HashLink></li>
+                <li><HashLink smooth to="/home#projects" onClick={closeMenu}>Projects</HashLink></li>
+                <li><HashLink smooth to="/home#contact" onClick={closeMenu}>Contact</HashLink></li>
             </ul>
         </nav>
     );
