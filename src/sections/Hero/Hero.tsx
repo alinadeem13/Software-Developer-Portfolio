@@ -1,6 +1,7 @@
 import styles from './style.module.css';
 // import profilePic from "../assets/Upwork Photo.png";
-import profilePic from '../../assets/Upwork Photo.png';
+import profilePic from '../../assets/photo.jpg';
+import { HashLink } from "react-router-hash-link";
 
 const Hero = () => {
     return (
@@ -15,15 +16,15 @@ const Hero = () => {
                 <h1>
                     Hi, I’m <span className={styles.highlight}>Ali Nadeem</span>
                 </h1>
-                <h2>MERN Stack - Full Stack Developer & AI Enthusiast </h2>
+                <h2>MERN Stack - Full Stack Developer & AI Enthusiast</h2>
                 <p>
                     I craft modern web applications with MERN Stack, Shopify, and WordPress.
                     With 2+ years of experience, I’ve delivered multiple projects worldwide.
                 </p>
 
                 <div className={styles.heroButtons}>
-                    <a href="#projects" className={styles.primaryBtn}>View Projects</a>
-                    <a href="#contact" className={styles.secondaryBtn}>Hire Me</a>
+                    <HashLink to="/home#projects" className={styles.primaryBtn}>View Projects</HashLink>
+                    <HashLink to="/home#contact" className={styles.secondaryBtn}>Hire Me</HashLink>
                 </div>
             </div>
         </section>
