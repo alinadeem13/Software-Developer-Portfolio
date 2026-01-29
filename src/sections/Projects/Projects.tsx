@@ -34,8 +34,15 @@ const projects = [
         title: "u4ria",
         description: "Meditation app with offline capability, progress tracking, and user personalization.",
         url: "https://u4riahub.com/",
-        tech: ["React Native", "Redux", "API"],
+        tech: ["React", "Node.js & Nest.js", "Redux", "API", "MongoDB"],
         type: "Mobile App"
+    },
+    {
+        title: "Inspector - Real Wealdity",
+        description: "Inspector App to Inspect the Homes with image recognition and report generation features.",
+        url: "https://sbx-inspector.realwealtdy.net/login",
+        tech: ["React Native", "Redux", "API", "Node.js", "Nest.js", "MongoDB"],
+        type: "Web & Mobile App"
     },
 ];
 

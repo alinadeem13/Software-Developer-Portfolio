@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import styles from './style.module.css';
 
 const Education = () => {
@@ -17,7 +17,7 @@ const Education = () => {
             title: "BS CS from UMT",
             degree: "Bachelor's Degree in Computer Science",
             institution: "University of Management and Technology (UMT)",
-            year: "2020 - 2024",
+            year: "Oct 2020 - July 2024",
             location: "Lahore, Pakistan",
             description: "Focused on Advanced Software Development, Full Stack & Mobile App Development,  Data Structures, and Algorithms, Scalable Databases, Mathematics (Calculus I & II, Linear Algebra, Numerical Analysis, Differential Equations) and programming languages (C++, Java, Python, Javascript, Kotlin). Developed a capstone project on 'Web Application Education Portal Integrated with Advanced AI Integrations'."
         },
@@ -38,6 +38,9 @@ const Education = () => {
     return (
         <section id="education" className={styles.education}>
             <h2 className={styles.title}>Education</h2>
+            <p className={styles.subtitle}>
+                A showcase of my academic journey and qualifications.
+            </p>
             <div className={styles.cardContainer}>
                 {educationData.map((edu, index) => (
                     <div
