@@ -51,7 +51,10 @@ export const Navbar = () => {
                 <li><HashLink smooth to="/home#hero" onClick={closeMenu}>Home</HashLink></li>
                 <li><HashLink smooth to="/home#about" onClick={closeMenu}>About</HashLink></li>
                 <li><HashLink smooth to="/home#projects" onClick={closeMenu}>Projects</HashLink></li>
+                <li><HashLink smooth to="/home#education" onClick={closeMenu}>Education</HashLink></li>
+                <li><HashLink smooth to="/home#experience" onClick={closeMenu}>Experience</HashLink></li>
                 <li><HashLink smooth to="/home#contact" onClick={closeMenu}>Contact</HashLink></li>
+
             </ul>
         </nav>
     );

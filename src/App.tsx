@@ -2,6 +2,8 @@ import "./App.css";
 import { Layout } from "./components/Layout";
 import { About } from "./sections/About/About";
 import Contact from "./sections/Contact/Contact";
+import Education from "./sections/Education/Education";
+import Experience from "./sections/Experience/Experience";
 import Hero from "./sections/Hero/Hero";
 import Projects from "./sections/Projects/Projects";
 import { Routes, Route, Navigate } from "react-router-dom";
@@ -18,7 +20,10 @@ function App() {
               <section id="hero"><Hero /></section>
               <section id="about"><About /></section>
               <section id="projects"><Projects /></section>
+              <section id="education"><Education /></section>
+              <section id="experience"><Experience /></section>
               <section id="contact"><Contact /></section>
+
             </div>
           }
         />
