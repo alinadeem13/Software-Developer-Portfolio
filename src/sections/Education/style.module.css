@@ -39,6 +39,17 @@
     border-radius: 2px;
 }
 
+.subtitle {
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--color-text-secondary);
+    margin-bottom: 60px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
 .timeline {
     display: flex;
     flex-direction: column;

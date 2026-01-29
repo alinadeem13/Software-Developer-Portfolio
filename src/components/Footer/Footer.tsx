@@ -27,6 +27,8 @@ export const Footer = () => {
                         <HashLink smooth to="/home#hero">Home</HashLink>
                         <HashLink smooth to="/home#about">About</HashLink>
                         <HashLink smooth to="/home#projects">Projects</HashLink>
+                        <HashLink smooth to="/home#education">Education</HashLink>
+                        <HashLink smooth to="/home#experience">Experience</HashLink>
                         <HashLink smooth to="/home#contact">Contact</HashLink>
                     </div>
                 </div>
