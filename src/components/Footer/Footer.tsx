@@ -18,7 +18,7 @@ export const Footer = () => {
                     <p>
                         📱 <a href="tel:+923324414997">+44 7345 531519</a>
                     </p>
-                    <p>📍 United Kingdom, London</p>
+                    <p>📍 London, United Kingdom</p>
                 </div>
 
                 {/* Center section - Main Navigation */}
