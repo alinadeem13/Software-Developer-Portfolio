@@ -16,9 +16,9 @@ export const Footer = () => {
                         📧 <a href="mailto:ali13nadeem@gmail.com">ali13nadeem@gmail.com</a>
                     </p>
                     <p>
-                        📱 <a href="tel:+923324414997">+92 (332) 4414997</a>
+                        📱 <a href="tel:+923324414997">+44 7345 531519</a>
                     </p>
-                    <p>📍 Pakistan, Lahore</p>
+                    <p>📍 United Kingdom, London</p>
                 </div>
 
                 {/* Center section - Main Navigation */}
