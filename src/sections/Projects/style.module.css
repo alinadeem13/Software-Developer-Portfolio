@@ -208,47 +208,83 @@
 @media (max-width: 768px) {
     .projects {
         padding: 80px 1rem;
+        /* Reduce padding for smaller screens */
     }
 
     .grid {
         grid-template-columns: 1fr;
+        /* Stack cards vertically */
         gap: 20px;
     }
 
     .card {
-        padding: 25px 20px;
-        min-height: 280px;
+        padding: 20px;
+        /* Reduce padding */
+        min-height: auto;
+        /* Allow cards to adjust height dynamically */
     }
 
     .cardHeader {
         flex-direction: column;
+        /* Stack title and type vertically */
         gap: 10px;
         align-items: flex-start;
     }
 
-    .subtitle {
-        font-size: 1rem;
-        margin-bottom: 40px;
+    .card h3 {
+        font-size: 1.2rem;
+        /* Adjust font size for smaller screens */
+    }
+
+    .projectType {
+        font-size: 0.9rem;
+        /* Adjust font size for smaller screens */
+    }
+
+    .description {
+        font-size: 0.9rem;
+        /* Adjust font size for smaller screens */
+        line-height: 1.5;
+    }
+
+    .techStack {
+        gap: 10px;
+        /* Adjust gap between tech tags */
+    }
+
+    .techTag {
+        font-size: 0.85rem;
+        /* Adjust font size for smaller screens */
+        padding: 5px 10px;
+    }
+
+    .viewProject {
+        font-size: 0.9rem;
+        /* Adjust font size for smaller screens */
     }
 }
 
 @media (max-width: 480px) {
     .projects h2 {
         font-size: 2rem;
+        /* Adjust title font size */
         margin-bottom: 15px;
     }
 
     .card {
-        padding: 20px 15px;
+        padding: 15px;
+        /* Further reduce padding */
     }
 
     .techStack {
         gap: 6px;
+        /* Further reduce gap between tech tags */
     }
 
     .techTag {
         font-size: 0.8rem;
-        padding: 5px 10px;
+        /* Further adjust font size */
+        padding: 4px 8px;
     }
 }
 

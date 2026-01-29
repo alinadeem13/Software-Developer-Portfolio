@@ -186,3 +186,65 @@
         transform: translateY(0);
     }
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cardContainer {
+        gap: 15px;
+        /* Reduce gap between cards */
+    }
+
+    .card {
+        padding: 20px;
+        /* Reduce padding for smaller screens */
+    }
+
+    .cardHeader {
+        margin-bottom: 15px;
+        /* Reduce margin */
+    }
+
+    .card h3 {
+        font-size: 1.2rem;
+        /* Adjust font size for smaller screens */
+    }
+
+    .cardDetails p {
+        font-size: 0.9rem;
+        /* Adjust font size for smaller screens */
+        line-height: 1.5;
+    }
+}
+
+@media (max-width: 480px) {
+    .education {
+        padding: 80px 1rem;
+        /* Reduce padding for very small screens */
+    }
+
+    .cardContainer {
+        gap: 10px;
+        /* Further reduce gap between cards */
+    }
+
+    .card {
+        padding: 15px;
+        /* Further reduce padding */
+    }
+
+    .cardHeader {
+        margin-bottom: 10px;
+        /* Further reduce margin */
+    }
+
+    .card h3 {
+        font-size: 1.1rem;
+        /* Further adjust font size */
+    }
+
+    .cardDetails p {
+        font-size: 0.85rem;
+        /* Further adjust font size */
+        line-height: 1.4;
+    }
+}
