@@ -1,7 +1,6 @@
 import styles from './style.module.css';
-// import profilePic from "../assets/Upwork Photo.png";
 import { HashLink } from "react-router-hash-link";
-import profilePic from "../../assets/profile-pic.png";
+import profilePic from "../../assets/myPhoto.jpg";
 
 const Hero = () => {
     return (
