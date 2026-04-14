@@ -1,6 +1,6 @@
 import styles from './style.module.css';
 import { HashLink } from "react-router-hash-link";
-import profilePic from "../../assets/myPhoto.jpg";
+import profilePic from "../../assets/myphoto.jpg";
 
 const Hero = () => {
     return (
