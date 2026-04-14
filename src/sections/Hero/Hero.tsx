@@ -1,6 +1,6 @@
 import styles from './style.module.css';
 // import profilePic from "../assets/Upwork Photo.png";
-import profilePic from '../../assets/photo.jpg';
+import profilePic from '../../assets/myPhoto.JPG';
 import { HashLink } from "react-router-hash-link";
 
 const Hero = () => {
